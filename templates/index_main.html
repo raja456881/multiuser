@@ -1,0 +1,2632 @@
+{% load static %}
+<!doctype html>
+<html lang="zxx">
+    
+<!-- Mirrored from templates.envytheme.com/raque/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Jun 2020 21:17:53 GMT -->
+<head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Revolution Slider CSS -->
+        <link rel="stylesheet" href="{% static 'assets/revolution/css/settings.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/revolution/css/layers.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/revolution/css/navigation.css' %}">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap..min.css' %}">
+        <!-- BoxIcons CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/boxicons.min.css' %}">
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/odometer.min.css' %}">
+        <!-- MeanMenu CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/nice-select.min.css' %}">
+        <!-- Viewer CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/viewer.min.css' %}">
+        <!-- Slick CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/slick.min.css' %}">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.min.css' %}">
+        <!-- Style CSS -->
+        <link rel="stylesheet" id="styles" href="{% static 'assets/css/style.css' %}">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/myStyle.css' %}">
+        <style>
+            .dropdown-submenu{
+    position: relative;
+}
+.dropdown-submenu a::after{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 3px;
+    top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute !important;
+    margin-top: -56px;
+    left: 100%;
+}
+@media (max-width: 992px) {
+    .dropdown-menu{
+        width: 50%;
+    }
+    .dropdown-menu .dropdown-submenu{
+        width: auto;
+    }
+}
+.dropdown-toggle::after {
+    display:none;
+}
+
+
+.dropdown-item{
+    padding: 1rem; 
+}
+.dropdown-item:hover{
+    border-left: 4px solid #796AEE;
+    background-color: #fff;
+    color: #000;
+}
+.dropdown-divider{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.dropdown-menu{
+    padding: 0 !important;
+}
+/* .submenu-dropdown{
+    width: 100%;
+} */
+.submenu-dropdown{
+    width: 650px;
+}
+.institute-list{
+    padding: 1rem;
+}
+.institute-list:hover{
+    background-color: rgb(236, 236, 241);
+    border-radius: 10%;
+}
+.course-btn{
+    background-color: #796AEE;
+    color: white;
+}
+.course-btn:hover{
+    color: white;
+}
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+   color: white;
+}
+@media only screen and (max-width: 731px) {
+    .banner-courses-category {
+        left:0%;
+        position: relative;
+        margin-top: 1rem;
+        margin-left: 1rem;
+}
+.youtube-video-div{
+    left:-10px;
+    padding-left: 0;
+    display: none;
+}
+.iframe-youtube{
+width: 95%;
+height: 100%;
+}
+}
+
+
+        </style>
+
+       
+
+        <title>EduBoat - Education & LMS</title>
+
+
+        <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        <!-- course-category-mobile view -->
+    <div class="modal fade" id="course-category-modal-mobile" data-keyboard="false" tabindex="-1" aria-labelledby="course-category-modal-mobileLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+            
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="pills-cat1-tab" data-toggle="pill" href="#pills-cat1" role="tab" aria-controls="pills-cat1" aria-selected="true">Category 1</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-cat2-tab" data-toggle="pill" href="#pills-cat2" role="tab" aria-controls="pills-cat2" aria-selected="false">Category 2</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="pills-cat3-tab" data-toggle="pill" href="#pills-cat3" role="tab" aria-controls="pills-cat3" aria-selected="false">Category 3</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-cat1" role="tabpanel" aria-labelledby="pills-cat1-tab">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-cat2" role="tabpanel" aria-labelledby="pills-cat2-tab">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-cat3" role="tabpanel" aria-labelledby="pills-cat3-tab">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                            <div class="col-4 institute-list">
+                                <i class='bx bx-book-reader bx-md'></i><br>
+                                <h5>Deakin School</h5>
+                                <p>MBA <em>2 years</em></p>
+                                <button class="btn btn-dark btn-sm">More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+        <div class="fab-container">
+            <button id="mode" class="icon-holder" value="Switch To Day Mode" data-toggle="tooltip" data-placement="left" title="Change Theme">
+                <span class="material-icons">
+                    wb_incandescent
+                </span>
+            </button>
+        </div>
+        <!-- Preloader -->
+        <!-- <div class="preloader">
+            <div class="loader">
+                <div class="shadow"></div>
+                <div class="box"></div>
+            </div>
+        </div> -->
+         
+      
+        <!-- End Preloader -->
+
+        <!-- Start Header Area -->
+        <header class="header-area p-relative">
+
+            <div class="top-header top-header-style-four">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8 col-md-8">
+                            <ul class="top-header-contact-info">
+                                <li>
+                                    Call: 
+                                    <a href="tel:502464674">+502 464 674</a>
+                                </li>
+                            </ul>
+
+                            <div class="top-header-social">
+                                <span>Follow us:</span>
+                                <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                                <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4">
+                            <ul class="top-header-login-register">
+                                {% if user.is_authenticated %}
+                                <li><i class='bx bx-log-in'></i> {{name}}</a></li>
+                                <li><a href="{% url 'logout' %}"><i class='bx bx-log-in-circle'></i> Logout</a></li>
+
+                                {% else %}
+                                <li><a href="{% url 'login' %}"><i class='bx bx-log-in'></i> Login</a></li>
+                                <li><a href="{% url 'registerchoice' %}"><i class='bx bx-log-in-circle'></i> Register</a></li>
+
+
+                                {% endif %}
+                                <li class="hide"><a href="#" type="button" data-toggle="modal" data-target="#course-category-modal-mobile"><i class='bx bx-book'></i> Courses</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area navbar-style-three">
+                <div class="raque-responsive-nav">
+                    <div class="container">
+                        <div class="raque-responsive-menu">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static 'assets/img/black-logo.png' %}" alt="logo">
+                                    
+                                </a>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="raque-nav">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="{% static 'assets/img/black-logo.png' %}" alt="logo">
+                            </a>
+                            <!-- course category start -->
+                            <li class="dropdown" style="list-style-type: none;">
+                                <a class="dropdown-toggle btn course-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class='bx bxs-book-bookmark'></i> Courses<i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">MBA</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Law</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Data Science</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Engineering</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 1</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 2</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 3</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 4</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 5</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            <!-- course category end -->
+
+                            <div class="collapse navbar-collapse mean-menu">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="index.html" class="nav-link active">Home 1</a></li>
+
+                                            <li class="nav-item"><a href="index-2.html" class="nav-link">Home 2</a></li>
+
+                                            <li class="nav-item"><a href="index-3.html" class="nav-link">Home 3</a></li>
+
+                                            <li class="nav-item"><a href="index-4.html" class="nav-link">Home 4</a></li>
+
+                                            <li class="nav-item"><a href="index-5.html" class="nav-link">Home 5</a></li>
+
+                                            <li class="nav-item"><a href="index-6.html" class="nav-link">Home 6</a></li>
+
+                                            <li class="nav-item"><a href="index-7.html" class="nav-link">Home 7</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#" class="nav-link">About <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="about-style-1.html" class="nav-link">About Style 1</a></li>
+        
+                                                    <li class="nav-item"><a href="about-style-2.html" class="nav-link">About Style 2</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="team-1.html" class="nav-link">Instructor Style 1</a></li>
+            
+                                                    <li class="nav-item"><a href="team-2.html" class="nav-link">Instructor Style 2</a></li>
+
+                                                    <li class="nav-item"><a href="team-3.html" class="nav-link">Instructor Style 3</a></li>
+
+                                                    <li class="nav-item"><a href="single-instructor.html" class="nav-link">Instructor Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Events <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+
+                                                    <li class="nav-item"><a href="single-events.html" class="nav-link">Events Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+
+                                            <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+                                            <li class="nav-item"><a href="partner.html" class="nav-link">Partner</a></li>
+
+                                            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log In</a></li>
+
+                                            <li class="nav-item"><a href="{% url 'registerchoice' %}" class="nav-link">Register</a></li>
+
+                                            <li class="nav-item"><a href="faqs.html" class="nav-link">FAQ's</a></li>
+
+                                            <li class="nav-item"><a href="error-404.html" class="nav-link">404 Error</a></li>
+
+                                            <li class="nav-item"><a href="coming-soon.html" class="nav-link">Comign Soon</a></li>
+                                        </ul>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="blog-style-1.html" class="nav-link">Blog Grid</a></li>
+
+                                            <li class="nav-item"><a href="blog-style-2.html" class="nav-link">Blog Right Sidebar</a></li>
+
+                                            <li class="nav-item"><a href="blog-style-3.html" class="nav-link">Blog Grid Full Width</a></li>
+
+                                            <li class="nav-item"><a href="single-blog.html" class="nav-link">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
+
+                                            <li class="nav-item"><a href="shop-grid-fullwidth.html" class="nav-link">Shop Grid FullWidth</a></li>
+
+                                            <li class="nav-item"><a href="single-product.html" class="nav-link">Products Details</a></li>
+                                            
+                                            <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+
+                                            <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                </ul>
+
+                                <div class="others-option">
+                                    <div class="dropdown language-switcher d-inline-block">
+                                        <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="{% static 'assets/img/us-flag.jpg' %}" class="shadow" alt="image">
+                                            <span>Eng <i class='bx bx-chevron-down'></i></span>
+                                        </button>
+
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/germany-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Ger</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/france-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Fre</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/spain-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Spa</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/russia-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Rus</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/italy-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Ita</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <a href="cart.html" class="cart-wrapper-btn d-inline-block">
+                                        <i class='bx bx-cart-alt'></i>
+                                        <span>01</span>
+                                    </a>
+
+                                    <div class="search-box d-inline-block">
+                                        <i class='bx bx-search'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            
+
+            <!-- Start Sticky Navbar Area -->
+            <div class="navbar-area navbar-style-three header-sticky">
+                <div class="raque-nav">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="{% static 'assets/img/black-logo.png' %}" alt="logo">
+                            </a>
+                            <!-- course category start -->
+                            <li class="dropdown" style="list-style-type: none;">
+                                <a class="dropdown-toggle  btn course-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class='bx bxs-book-bookmark'></i> Courses<i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">MBA</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Law</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Data Science</a>
+                                    <ul class="dropdown-menu">
+                                        <a class="dropdown-item submenu-dropdown" href="#">
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container">
+                                                <div class="row text-center">
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                    <div class="col-3 institute-list">
+                                                        <i class='bx bx-book-reader bx-md'></i><br>
+                                                        <h5>Deakin School</h5>
+                                                        <p>MBA <em>2 years</em></p>
+                                                        <button class="btn btn-dark btn-sm">More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Engineering</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 1</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 2</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 3</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 4</a>
+                                  </li>
+                                  <div class="dropdown-divider"></div>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Category 5</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            <!-- course category end -->
+
+                            <div class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="#" class="nav-link active">Home <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="index.html" class="nav-link active">Home 1</a></li>
+
+                                            <li class="nav-item"><a href="index-2.html" class="nav-link">Home 2</a></li>
+
+                                            <li class="nav-item"><a href="index-3.html" class="nav-link">Home 3</a></li>
+
+                                            <li class="nav-item"><a href="index-4.html" class="nav-link">Home 4</a></li>
+
+                                            <li class="nav-item"><a href="index-5.html" class="nav-link">Home 5</a></li>
+
+                                            <li class="nav-item"><a href="index-6.html" class="nav-link">Home 6</a></li>
+
+                                            <li class="nav-item"><a href="index-7.html" class="nav-link">Home 7</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Pages <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#" class="nav-link">About <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="about-style-1.html" class="nav-link">About Style 1</a></li>
+        
+                                                    <li class="nav-item"><a href="about-style-2.html" class="nav-link">About Style 2</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="#" class="nav-link">Instructor <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="team-1.html" class="nav-link">Instructor Style 1</a></li>
+            
+                                                    <li class="nav-item"><a href="team-2.html" class="nav-link">Instructor Style 2</a></li>
+
+                                                    <li class="nav-item"><a href="team-3.html" class="nav-link">Instructor Style 3</a></li>
+
+                                                    <li class="nav-item"><a href="single-instructor.html" class="nav-link">Instructor Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Events <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+
+                                                    <li class="nav-item"><a href="single-events.html" class="nav-link">Events Details</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+
+                                            <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+
+                                            <li class="nav-item"><a href="partner.html" class="nav-link">Partner</a></li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Log In</a></li>
+
+                                            <li class="nav-item"><a href="{% url 'registerchoice' %}" class="nav-link">Register</a></li>
+
+                                            <li class="nav-item"><a href="faqs.html" class="nav-link">FAQ's</a></li>
+
+                                            <li class="nav-item"><a href="error-404.html" class="nav-link">404 Error</a></li>
+
+                                            <li class="nav-item"><a href="coming-soon.html" class="nav-link">Comign Soon</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Courses <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="#" class="nav-link">Courses Category <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="courses-category-style-1.html" class="nav-link">Category Style 1</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-category-style-2.html" class="nav-link">Category Style 2</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-category-style-3.html" class="nav-link">Category Style 3</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="courses-list.html" class="nav-link">Courses List</a></li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 1 <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="courses-2-columns-style-1.html" class="nav-link">2 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-3-columns-style-1.html" class="nav-link">3 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-4-columns-style-1.html" class="nav-link">4 Columns Full Width</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 2 <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="courses-2-columns-style-2.html" class="nav-link">2 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-3-columns-style-2.html" class="nav-link">3 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-4-columns-style-2.html" class="nav-link">4 Columns Full Width</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Courses Grid Style 3 <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="courses-2-columns-style-3.html" class="nav-link">2 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-3-columns-style-3.html" class="nav-link">3 Columns</a></li>
+        
+                                                    <li class="nav-item"><a href="courses-4-columns-style-3.html" class="nav-link">4 Columns Full Width</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="nav-item"><a href="#" class="nav-link">Courses Details <i class='bx bx-chevron-right'></i></a>
+                                                <ul class="dropdown-menu">
+                                                    <li class="nav-item"><a href="single-courses.html" class="nav-link">Courses Details 1</a></li>
+
+                                                    <li class="nav-item"><a href="single-courses-2.html" class="nav-link">Courses Details 2</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li class="nav-item"><a href="my-account.html" class="nav-link">My Account</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Blog <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="blog-style-1.html" class="nav-link">Blog Grid</a></li>
+
+                                            <li class="nav-item"><a href="blog-style-2.html" class="nav-link">Blog Right Sidebar</a></li>
+
+                                            <li class="nav-item"><a href="blog-style-3.html" class="nav-link">Blog Grid Full Width</a></li>
+
+                                            <li class="nav-item"><a href="single-blog.html" class="nav-link">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#" class="nav-link">Shop <i class='bx bx-chevron-down'></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="shop-grid.html" class="nav-link">Shop Grid</a></li>
+
+                                            <li class="nav-item"><a href="shop-grid-fullwidth.html" class="nav-link">Shop Grid FullWidth</a></li>
+
+                                            <li class="nav-item"><a href="single-product.html" class="nav-link">Products Details</a></li>
+                                            
+                                            <li class="nav-item"><a href="cart.html" class="nav-link">Cart</a></li>
+
+                                            <li class="nav-item"><a href="checkout.html" class="nav-link">Checkout</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                                </ul>
+
+                                <div class="others-option">
+                                    <div class="dropdown language-switcher d-inline-block">
+                                        <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <img src="{% static 'assets/img/us-flag.jpg' %}" class="shadow" alt="image">
+                                            <span>Eng <i class='bx bx-chevron-down'></i></span>
+                                        </button>
+
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/germany-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Ger</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/france-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Fre</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/spain-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Spa</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/russia-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Rus</span>
+                                            </a>
+                                            <a href="#" class="dropdown-item d-flex align-items-center">
+                                                <img src="{% static 'assets/img/italy-flag.jpg' %}" class="shadow-sm" alt="flag">
+                                                <span>Ita</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <a href="cart.html" class="cart-wrapper-btn d-inline-block">
+                                        <i class='bx bx-cart-alt'></i>
+                                        <span>01</span>
+                                    </a>
+
+                                    <div class="search-box d-inline-block">
+                                        <i class='bx bx-search'></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sticky Navbar Area -->
+            
+        </header>
+        <!-- End Header Area -->
+
+        <!-- search-box-layout -->
+        <div class="search-overlay">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="search-overlay-layer"></div>
+                    <div class="search-overlay-layer"></div>
+                    <div class="search-overlay-layer"></div>
+                    
+                    <div class="search-overlay-close">
+                        <span class="search-overlay-close-line"></span>
+                        <span class="search-overlay-close-line"></span>
+                    </div>
+
+                    <div class="search-overlay-form">
+                        <form>
+                            <input type="text" class="input-search" placeholder="Search here...">
+                            <button type="submit"><i class='bx bx-search-alt'></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- search-box-layout end -->
+
+        <!-- Start Slider Area -->
+        <div class="slider_area">
+            
+            <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classic4export" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+
+                <!-- START REVOLUTION SLIDER 5.4.1 fullwidth mode -->
+                <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.1">
+
+                    <ul>
+                        <!-- SLIDE  -->
+                        <li data-index="rs-3049" data-transition="zoomin" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/img/main-banner1.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="First Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'assets/img/main-banner1.jpg' %}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="7000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 -500" data-offsetend="0 500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            
+                            
+                                
+                            <div class="search-container">
+                               <div class="banner-wrapper-content container">
+                                   <form class="searchbox">
+                                        <div class="inSameLine">
+                                            <div class="course-search">
+                                                <select class="input-search" type="text" name="my-text" placeholder="Courses" style="border-radius: 0px; text-align: center;" size="2" multiple>
+                                                    <option>Online</option>
+                                                    <option>Offline</option>
+                                                    <option>Live</option>
+                                                    <option selected>All Courses</option>
+                                                </select>
+                                            </div>
+                                            <div class="global">
+                                                <input type="text" name="my-text" list="cities" placeholder="Search Courses here..." style="font-size: 1vw;border-top-right-radius:70px;border-bottom-right-radius: 70px;border-top-left-radius: 0px;border-bottom-left-radius: 0px; " class="input-search" >
+                                                <!-- <img src="assets/img/pin.png" style="position: relative;bottom: 45px;left:1px"> -->
+                                                <button class="default-btn" type="button" style="font-size: 0.9vw; padding: 0 25px; border-radius: 30px">Search <div class="search-box d-inline-block">
+                                                    <i class='bx bx-search'></i>
+                                                </div></button>
+                                            </div>
+                                        </div>
+                                   </form>
+                                </div>
+                            </div>
+                                
+                            <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']" data-width="none" data-height="none" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                                <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            </div>
+                        </li>
+
+                        <!-- SLIDE  -->
+                        <li data-index="rs-3045" data-transition="zoomout" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="assets/img/main-banner2.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Second Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'assets/img/main-banner2.jpg' %}" alt="" data-bgposition="center center" data-kenburns="on" data-duration="7000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 500" data-offsetend="0 -500" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                
+                        
+                              <div class="search-container">
+                               <div class="banner-wrapper-content container">
+                                   <form class="searchbox">
+                                        <div class="inSameLine">
+                                            <div class="course-search">
+                                                <select class="input-search" type="text" name="my-text" placeholder="Courses" style="border-radius: 0px; text-align: center;" size="2" multiple>
+                                                    <option>Online</option>
+                                                    <option>Offline</option>
+                                                    <option>Live</option>
+                                                    <option selected>All Courses</option>
+                                                </select>
+                                            </div>
+                                            <div class="global">
+                                                <input type="text" name="my-text" list="cities" placeholder="Search Courses here..." style="font-size: 1vw;border-top-right-radius:70px;border-bottom-right-radius: 70px;border-top-left-radius: 0px;border-bottom-left-radius: 0px; " class="input-search" >
+                                                <!-- <img src="assets/img/pin.png" style="position: relative;bottom: 45px;left:1px"> -->
+                                                <button class="default-btn" type="button" style="font-size: 0.9vw; padding: 0 25px; border-radius: 30px">Search <div class="search-box d-inline-block">
+                                                    <i class='bx bx-search'></i>
+                                                </div></button>
+                                            </div>
+                                        </div>
+                                   </form>
+                                </div>
+                            </div>
+
+                            <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']" data-width="none" data-height="none" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                                <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            </div>
+                        </li>
+
+                        <!-- SLIDE  -->
+                        <li data-index="rs-3046" data-transition="fadetotopfadefrombottom" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power3.easeInOut" data-easeout="Power3.easeInOut" data-masterspeed="1500"  data-thumb="assets/img/main-banner3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Third Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'assets/img/main-banner3.jpg' %}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+
+                            
+                              <div class="search-container">
+                               <div class="banner-wrapper-content container">
+                                   <form class="searchbox">
+                                        <div class="inSameLine">
+                                            <div class="course-search">
+                                                <select class="input-search" type="text" name="my-text" placeholder="Courses" style="border-radius: 0px; text-align: center;" size="2" multiple>
+                                                    <option>Online</option>
+                                                    <option>Offline</option>
+                                                    <option>Live</option>
+                                                    <option selected>All Courses</option>
+                                                </select>
+                                            </div>
+                                            <div class="global">
+                                                <input type="text" name="my-text" list="cities" placeholder="Search Courses here..." style="font-size: 1vw;border-top-right-radius:70px;border-bottom-right-radius: 70px;border-top-left-radius: 0px;border-bottom-left-radius: 0px; " class="input-search" >
+                                                <!-- <img src="assets/img/pin.png" style="position: relative;bottom: 45px;left:1px"> -->
+                                                <button class="default-btn" type="button" style="font-size: 0.9vw; padding: 0 25px; border-radius: 30px">Search <div class="search-box d-inline-block">
+                                                    <i class='bx bx-search'></i>
+                                                </div></button>
+                                            </div>
+                                        </div>
+                                   </form>
+                                </div>
+                            </div>
+
+                            <div class="tp-caption NotGeneric-btn tp-resizeme" id="slide-3045-layer-8" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['115','115','115','115']" data-width="none" data-height="none" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'>
+                                <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                            </div>
+
+                        </li>
+                    </ul>
+
+                    <div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);"></div>
+                </div>
+
+            </div><!-- END REVOLUTION SLIDER -->
+             
+        <!-- End Slider Area -->
+        <!--box area-->
+        <section class="boxes-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <!--CHANGES -->
+                        <div class="single-boxes-item">
+                            <h3>Learn The Latest Skills</h3>
+                            
+                            <a href="courses-2-columns-style-1.html" class="boxes-btn">View Courses<i class='bx bx-plus'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-boxes-item bg-image">
+                            <h3>100k Online Courses</h3>
+                            >
+                            <a href="courses-2-columns-style-2.html" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-boxes-item bg-color">
+                            <h3>Earn a Certificate</h3>
+                            
+                            <a href="courses-3-columns-style-1.html" class="boxes-btn">View Courses<i class='bx bx-plus'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-boxes-item">
+                            <h3>Up Your Skill</h3>
+                            
+                            <a href="courses-4-columns-style-1.html" class="boxes-btn">View More<i class='bx bx-plus'></i></a>
+                        </div>
+                        <!--CHANGES -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start About Area -->
+        <section class="about-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <img src="{% static 'assets/img/about/1.jpg' %}" class="shadow" alt="image">
+                            <img src="{% static 'assets/img/about/2.jpg' %}" class="shadow" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-content">
+                            <span class="sub-title">About Us</span>
+                            <h2>Learn New Skills to go ahead for Your Career</h2>
+                            <h6>We can support student forum 24/7 for national and international students.</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+
+                            <div class="features-text">
+                                <h5><i class='bx bx-planet'></i>A place where you can achieve</h5>
+                                <p>Education encompasses both the teaching and learning of knowledge, proper conduct, and technical competency.</p>
+                            </div>
+
+                            <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-move-horizontal icon-arrow before'></i><span class="label">View Courses</span><i class="bx bx-move-horizontal icon-arrow after"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="particles-js-circle-bubble-4"></div>
+        </section>
+        <!-- End About Area -->
+
+        <!-- start courses grid area-->
+
+            <div class="row container text-center">
+                <div class="col-md-6 col-12 youtube-video-div" style="left: 30px;">
+                    <iframe class="iframe-youtube" width="120%" height="95%" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+                    </iframe>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="banner-courses-category">
+                        <ul>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-shape-triangle'></i>
+                                    Technology
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-font-family'></i>
+                                    Language
+                                </a>
+                            </li>
+                            
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bxs-drink'></i>
+                                    Science
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-first-aid'></i>
+                                    Health
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-bar-chart-alt-2'></i>
+                                    Humanities
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-briefcase-alt-2'></i>
+                                    Business
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-book-reader'></i>
+                                    Math
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-target-lock'></i>
+                                    Marketing
+                                </a>
+                            </li>
+                            <li class="boxes">
+                                <a href="#">
+                                    <i class='bx bx-desktop'></i>
+                                    Design
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+                
+
+        <!-- end courses grid area-->
+
+
+        <!-- Start Courses Categories Area -->
+        <section class="courses-categories-area bg-image pt-100 pb-70">
+            <div class="container">
+                <div class="section-title text-left">
+                    <span class="sub-title">Courses Categories</span>
+                    <h2>Browse Trending Categories</h2>
+                    <a href="courses-category-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">View All</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                </div>
+
+                <div class="courses-categories-slides owl-carousel owl-theme">
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bx-code-alt'></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <span>60 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bx-camera'></i>
+                        </div>
+                        <h3>Photography </h3>
+                        <span>21 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bx-layer'></i>
+                        </div>
+                        <h3>Graphics Design</h3>
+                        <span>58 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bxs-flag-checkered'></i>
+                        </div>
+                        <h3>Web Language</h3>
+                        <span>99 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bx-health'></i>
+                        </div>
+                        <h3>Health & Fitness</h3>
+                        <span>21 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+
+                    <div class="single-categories-courses-box mb-30">
+                        <div class="icon">
+                            <i class='bx bx-line-chart'></i>
+                        </div>
+                        <h3>Business Studies</h3>
+                        <span>49 Courses</span>
+
+                        <a href="#" class="link-btn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="particles-js-circle-bubble-2"></div>
+        </section>
+        <!-- End Courses Categories Area -->
+
+        <!-- Start Funfacts Area -->
+        <section class="funfacts-area pt-100">
+            <div class="container">
+                <div class="funfacts-inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-6">
+                            <div class="single-funfact">
+                                <div class="icon">
+                                    <i class='bx bxs-group'></i>
+                                </div>
+                                <h3 class="odometer" data-count="50">00</h3>
+                                <p>Expert Instructors</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6">
+                            <div class="single-funfact">
+                                <div class="icon">
+                                    <i class='bx bx-book-reader'></i>
+                                </div>
+                                <h3 class="odometer" data-count="1754">00</h3>
+                                <p>Total Courses</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6">
+                            <div class="single-funfact">
+                                <div class="icon">
+                                    <i class='bx bx-user-pin'></i>
+                                </div>
+                                <h3 class="odometer" data-count="8190">00</h3>
+                                <p>Happy Students</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-6">
+                            <div class="single-funfact">
+                                <div class="icon">
+                                    <i class='bx bxl-deviantart'></i>
+                                </div>
+                                <h3 class="odometer" data-count="654">00</h3>
+                                <p>Creative Events</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="particles-js-circle-bubble"></div>
+                </div>
+            </div>
+        </section>
+        <!-- End Funfacts Area -->
+
+        <!-- Start Courses Area -->
+        <section class="courses-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title text-left">
+                    <span class="sub-title">Discover Courses</span>
+                    <h2>Our Popular Online Courses</h2>
+                    <a href="courses-2-columns-style-1.html" class="default-btn"><i class='bx bx-show-alt icon-arrow before'></i><span class="label">All Courses</span><i class="bx bx-show-alt icon-arrow after"></i></a>
+                </div>
+
+                <div class="shorting-menu">
+                    <button class="filter" data-filter="all">All (06)</button>
+                    <button class="filter" data-filter=".business">Business (02)</button>
+                    <button class="filter" data-filter=".design">Design (05)</button>
+                    <button class="filter" data-filter=".development">Development (04)</button>
+                    <button class="filter" data-filter=".language">Language (02)</button>
+                    <button class="filter" data-filter=".management">Management (03)</button>
+                    <button class="filter" data-filter=".photography">Photography (04)</button>
+                </div>
+
+                <div class="shorting">
+                    <div class="row">
+                        {% for course in courseDetails %}
+                        <div class="col-lg-4 col-md-6 mix business design language">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="{% url 'course_page' course.slug %}" class="d-block"><img src="{{course.getImageURL}}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">{{course.courseCategory}}</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user1.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>Steven Smith</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">{{course.courseName}}</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            5.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 10 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 6 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            Free
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                      <!--  <div class="col-lg-4 col-md-6 mix business design language">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/1.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Business</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user1.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>Steven Smith</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Raque Professional IT Expert Certificate Course</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            5.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 10 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 6 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            Free
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                       <div class="col-lg-4 col-md-6 mix design development management photography">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/2.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Design</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user2.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>Sarah Taylor</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Certified Graphic Design with Free Project Course</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star-half'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            4.5 (2 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 15 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 10 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            $250
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 mix development business management">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/3.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Development</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user3.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>James Anderson</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Photography Crash Course for Photographer</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bx-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            4.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 5 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 5 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            $150
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 mix language design development photography">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/4.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Language</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user4.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>Liam King</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Web Design for Developing Technology with Joy</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            5.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 10 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 6 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            <span>$200</span>
+                                            $195
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6 mix management design photography">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/5.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Management</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user5.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>Lina D'Souza</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Information About UI/UX Design Degree</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            5.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 10 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 6 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            $178
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                       <div class="col-lg-4 col-md-6 mix photography design development photography">
+                            <div class="single-courses-box mb-30">
+                                <div class="courses-image">
+                                    <a href="single-courses.html" class="d-block"><img src="{% static 'assets/img/courses/6.jpg' %}" alt="image"></a>
+    
+                                    <div class="courses-tag">
+                                        <a href="#" class="d-block">Photography</a>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-content">
+                                    <div class="course-author d-flex align-items-center">
+                                        <img src="{% static 'assets/img/user6.jpg' %}" class="rounded-circle mr-2" alt="image">
+                                        <span>David Warner</span>
+                                    </div>
+    
+                                    <h3><a href="single-courses.html" class="d-inline-block">Photography Photo modify and Beautiful</a></h3>
+    
+                                    <div class="courses-rating">
+                                        <div class="review-stars-rated">
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                            <i class='bx bxs-star'></i>
+                                        </div>
+    
+                                        <div class="rating-total">
+                                            5.0 (1 rating)
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="courses-box-footer">
+                                    <ul>
+                                        <li class="students-number">
+                                            <i class='bx bx-user'></i> 10 students
+                                        </li>
+    
+                                        <li class="courses-lesson">
+                                            <i class='bx bx-book-open'></i> 6 lessons
+                                        </li>
+    
+                                        <li class="courses-price">
+                                            $500
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Courses Area -->
+
+        <!-- Start Mission Area -->
+        <section class="mission-area ptb-100 jarallax" data-jarallax='{"speed": 0.3}'>
+            <div class="container">
+                <div class="mission-content">
+                    <div class="section-title text-left">
+                        <span class="sub-title">Discover Mission</span>
+                        <h2>Why our platform in better</h2>
+                    </div>
+
+                    <div class="mission-slides owl-carousel owl-theme">
+                        <div>
+                            <h3>Quality can be better than quantity in this platform</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="about-style-2.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
+                        </div>
+
+                        <div>
+                            <h3>A place where you can achieve</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="about-style-1.html" class="default-btn"><i class='bx bx-user-pin icon-arrow before'></i><span class="label">Learn More</span><i class="bx bx-user-pin icon-arrow after"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Mission Area -->
+
+        <!-- Start Partner Area -->
+        <section class="partner-area bg-color ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Company & Partners</h2>
+                </div>
+
+                <div class="partner-slides owl-carousel owl-theme">
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/1.png' %}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/2.png' %}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/3.png' %}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/4.png' %}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/5.png' %}" alt="image">
+                        </a>
+                    </div>
+
+                    <div class="single-partner-item">
+                        <a href="#" class="d-block">
+                            <img src="{% static 'assets/img/partner/6.png' %}" alt="image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Partner Area -->
+
+        <!-- Start Team Area -->
+        <section class="team-area ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title">Make Connections</span>
+                    <h2>Team of Instructors</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut nisi ut aliquip ex ea.</p>
+                </div>
+
+                <div class="team-slides owl-carousel owl-theme">
+                    <div class="single-instructor-box mb-30">
+                        <div class="image">
+                            <img src="{% static 'assets/img/team/1.jpg' %}" alt="image">
+
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-instructor.html">Alex Maxwel</a></h3>
+                            <span>CEO & Founder</span>
+                        </div>
+                    </div>
+
+                    <div class="single-instructor-box mb-30">
+                        <div class="image">
+                            <img src="{% static 'assets/img/team/2.jpg' %}" alt="image">
+                            
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-instructor.html">Sarah Taylor</a></h3>
+                            <span>UX/UI Designer</span>
+                        </div>
+                    </div>
+
+                    <div class="single-instructor-box mb-30">
+                        <div class="image">
+                            <img src="{% static 'assets/img/team/3.jpg' %}" alt="image">
+                            
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-instructor.html">Lee Munroe</a></h3>
+                            <span>Web Developer</span>
+                        </div>
+                    </div>
+
+                    <div class="single-instructor-box mb-30">
+                        <div class="image">
+                            <img src="{% static 'assets/img/team/4.jpg' %}" alt="image">
+                            
+                            <ul class="social">
+                                <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-instructor.html">Jonkin Jullinor</a></h3>
+                            <span>OOP Developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="particles-js-circle-bubble-3"></div>
+        </section>
+        <!-- End Team Area -->
+
+        <!-- Start Become Instructor & Partner Area -->
+        <section class="become-instructor-partner-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-content bg-color">
+                            <h2 style="color: red;">Become an Instructor</h2>
+                            <p style="color: red;"> Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
+                            <a href="login.html" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Apply Now</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-image bg-image1 jarallax" data-jarallax='{"speed": 0.3}'>
+                            <img src="{% static 'assets/img/become-instructor.jpg' %}" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-image bg-image2 jarallax" data-jarallax='{"speed": 0.3}'>
+                            <img src="{% static 'assets/img/become-partner.jpg' %}" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="become-instructor-partner-content">
+                            <h2>Become a Partner</h2>
+                            <p>Choose from hundreds of free courses, or get a degree or certificate at a breakthrough price. Learn at your own pace.</p>
+                            <a href="login.html" class="default-btn"><i class='bx bx-plus-circle icon-arrow before'></i><span class="label">Contact Us</span><i class="bx bx-plus-circle icon-arrow after"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Become Instructor & Partner Area -->
+
+        <!-- Start Feedback Area -->
+        <section class="feedback-area ptb-100">
+            <div class="container">
+                <div class="feedback-slides owl-carousel owl-theme">
+                    <div class="single-feedback-item">
+                        <p>“Keep away from people who try to belittle your ambitions. Small people always do that, but the really great make you feel that you, too, can become great.”</p>
+
+                        <div class="info">
+                            <h3>James Anderson</h3>
+                            <span>Switzerland</span>
+                            <img src="{% static 'assets/img/user1.jpg' %}" class="shadow rounded-circle" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="single-feedback-item">
+                        <p>“The difference between school and life? In school, you're taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.”</p>
+
+                        <div class="info">
+                            <h3>Lina D'Souza</h3>
+                            <span>Switzerland</span>
+                            <img src="{% static 'assets/img/user2.jpg' %}" class="shadow rounded-circle" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="single-feedback-item">
+                        <p>“If a man empties his purse into his head, no man can take it away from him. An investment in knowledge always pays the best interest.”</p>
+
+                        <div class="info">
+                            <h3>David Warner</h3>
+                            <span>Switzerland</span>
+                            <img src="{% static 'assets/img/user3.jpg' %}" class="shadow rounded-circle" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Feedback Area -->
+
+        <!-- Start Blog Area -->
+        <section class="blog-area pt-100 pb-70">
+            <div class="container">
+                <div class="section-title text-left">
+                    <span class="sub-title">Explore News</span>
+                    <h2>Our Latest Insights</h2>
+                    <a href="blog-style-1.html" class="default-btn"><i class='bx bx-book-reader icon-arrow before'></i><span class="label">Read All</span><i class="bx bx-book-reader icon-arrow after"></i></a>
+                </div>
+
+                <div class="blog-slides owl-carousel owl-theme">
+                    <div class="single-blog-post mb-30">
+                        <div class="post-image">
+                            <a href="single-blog.html" class="d-block">
+                                <img src="{% static 'assets/img/blog/1.jpg' %}" alt="image">
+                            </a>
+
+                            <div class="tag">
+                                <a href="#">Learning</a>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    <img src="{% static 'assets/img/user1.jpg' %}" class="d-inline-block rounded-circle mr-2" alt="image">
+                                    By: <a href="#" class="d-inline-block">Steven Smith</a>
+                                </li>
+                                <li><a href="#">August 30, 2019</a></li>
+                            </ul>
+                            <h3><a href="single-blog.html" class="d-inline-block">World largest elephant toothpaste experiment in 2019</a></h3>
+                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="single-blog-post mb-30">
+                        <div class="post-image">
+                            <a href="single-blog.html" class="d-block">
+                                <img src="{% static 'assets/img/blog/2.jpg' %}" alt="image">
+                            </a>
+
+                            <div class="tag">
+                                <a href="#">Education</a>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    <img src="{% static 'assets/img/user2.jpg' %}" class="d-inline-block rounded-circle mr-2" alt="image">
+                                    By: <a href="#" class="d-inline-block">Lina D'Souja</a>
+                                </li>
+                                <li><a href="#">August 29, 2019</a></li>
+                            </ul>
+                            <h3><a href="single-blog.html" class="d-inline-block">Most Popular Education Posts Of The Week 20-26 Aug</a></h3>
+                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="single-blog-post mb-30">
+                        <div class="post-image">
+                            <a href="single-blog.html" class="d-block">
+                                <img src="{% static 'assets/img/blog/3.jpg' %}" alt="image">
+                            </a>
+
+                            <div class="tag">
+                                <a href="#">Management</a>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    <img src="{% static 'assets/img/user3.jpg' %}" class="d-inline-block rounded-circle mr-2" alt="image">
+                                    By: <a href="#" class="d-inline-block">David Malan</a>
+                                </li>
+                                <li><a href="#">August 28, 2019</a></li>
+                            </ul>
+                            <h3><a href="single-blog.html" class="d-inline-block">How to enhance education quality management system</a></h3>
+                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="single-blog-post mb-30">
+                        <div class="post-image">
+                            <a href="single-blog.html" class="d-block">
+                                <img src="{% static 'assets/img/blog/4.jpg' %}" alt="image">
+                            </a>
+
+                            <div class="tag">
+                                <a href="#">Ideas</a>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    <img src="{% static 'assets/img/user5.jpg' %}" class="d-inline-block rounded-circle mr-2" alt="image">
+                                    By: <a href="#" class="d-inline-block">David Warner</a>
+                                </li>
+                                <li><a href="#">August 27, 2019</a></li>
+                            </ul>
+                            <h3><a href="single-blog.html" class="d-inline-block">Global education: Ideas for the way move forward</a></h3>
+                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="single-blog-post mb-30">
+                        <div class="post-image">
+                            <a href="single-blog.html" class="d-block">
+                                <img src="{% static 'assets/img/blog/5.jpg' %}" alt="image">
+                            </a>
+
+                            <div class="tag">
+                                <a href="#">Workforce</a>
+                            </div>
+                        </div>
+
+                        <div class="post-content">
+                            <ul class="post-meta">
+                                <li class="post-author">
+                                    <img src="{% static 'assets/img/user6.jpg' %}" class="d-inline-block rounded-circle mr-2" alt="image">
+                                    By: <a href="#" class="d-inline-block">Olivar Waise</a>
+                                </li>
+                                <li><a href="#">August 26, 2019</a></li>
+                            </ul>
+                            <h3><a href="single-blog.html" class="d-inline-block">New report reimagines the broader education workforce</a></h3>
+                            <a href="single-blog.html" class="read-more-btn">Read More <i class='bx bx-right-arrow-alt'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Area -->
+
+        <!-- Start Footer Area -->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget mb-30">
+                            <h3>Contact Us</h3>
+
+                            <ul class="contact-us-link">
+                                <li>
+                                    <i class='bx bx-map'></i>
+                                    <a href="#" target="_blank">2750 Quadra Street Victoria Road, New York, Canada</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-phone-call'></i>
+                                    <a href="#">+1 (123) 456 7890</a>
+                                </li>
+                                <li>
+                                    <i class='bx bx-envelope'></i>
+                                    <a href="#">hello@raque.com</a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-link">
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                                <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-pinterest-alt'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget mb-30">
+                            <h3>Support</h3>
+
+                            <ul class="support-link">
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">FAQ's</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Condition</a></li>
+                                <li><a href="#">Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="single-footer-widget mb-30">
+                            <h3>Useful Link</h3>
+
+                            <ul class="useful-link">
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                                <li><a href="#">WP Development</a></li>
+                                <li><a href="#">App</a></li>
+                                <li><a href="#">Whitepaper</a></li>
+                                <li><a href="#">Web Development</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget mb-30">
+                            <h3>Newsletter</h3>
+
+                            <div class="newsletter-box">
+                                <p>To get the latest news and latest updates from us.</p>
+
+                                <form class="newsletter-form" data-toggle="validator">
+                                    <label>Your e-mail address:</label>
+                                    <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
+                                    <button type="submit">Subscribe</button>
+                                    <div id="validator-newsletter" class="form-result"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html" class="d-inline-block"><img src="{% static 'assets/img/logo.png' %}" alt="image"></a>
+                    </div>
+                    <p>Copyright <i class='bx bx-copyright'></i> 2020 <a href="index.html" target="_blank">Raque</a> Designed By <a href="https://envytheme.com/" target="_blank">EnvyTheme</a> | All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+        
+        <div class="go-top"><i class='bx bx-up-arrow-alt'></i></div>
+        <script src="{% static 'assets/js/dark.js' %}"></script>  
+         
+        <!-- Jquery JS -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <!-- Popper JS -->
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <!-- Owl Carousel JS -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <!-- Mixitup JS -->
+        <script src="{% static 'assets/js/mixitup.min.js' %}"></script>
+        <!-- Parallax JS -->
+        <script src="{% static 'assets/js/parallax.min.js' %}"></script>
+        <!-- Appear JS -->
+        <script src="{% static 'assets/js/jquery.appear.min.js' %}"></script>
+        <!-- Odometer JS -->
+        <script src="{% static 'assets/js/odometer.min.js' %}"></script>
+        <!-- Particles JS -->
+        <script src="{% static 'assets/js/particles.min.js' %}"></script>
+        <!-- MeanMenu JS -->
+        <script src="{% static 'assets/js/meanmenu.min.js' %}"></script>
+        <!-- Nice Select JS -->
+        <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+        <!-- Viewer JS -->
+        <script src="{% static 'assets/js/viewer.min.js' %}"></script>
+        <!-- Slick JS -->
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+        <!-- Magnific Popup JS -->
+        <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- AjaxChimp JS -->
+        <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+        <!-- Form Validator JS -->
+        <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+        <!-- Contact Form JS -->
+        <script src="{% static 'assets/js/contact-form-script.js' %}"></script>
+        <!-- Raque Map JS -->
+        <script src="{% static 'assets/js/raque-map.js' %}"></script>
+        <!-- Main JS -->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+        <!-- Slider Revolution core JavaScript files -->
+        <script src="{% static 'assets/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+        <script src="{% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+        <script src="{% static 'assets/js/rev-slider-custom.js' %}"></script>
+              <script>
+
+
+
+    </script>
+        </div>
+    </body>
+
+<!-- Mirrored from templates.envytheme.com/raque/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 19 Jun 2020 21:18:23 GMT -->
+</html>

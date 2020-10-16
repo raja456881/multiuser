@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>Geo City Locator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<form method="post" enctype="multi-part/formdata" action="/crm/location">
+    {% csrf_token %}
+     <button type="button" onclick="location_functn()"> Automatic location</button>
+    <button type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+    <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Country : </label>
+
+<input  name="country" class="form-control" value="" id="country_name" type="text" placeholder="Country">
+  <i class="fa fa-puzzle-piece" aria-hidden="true"></i> State : </label>
+
+    <input  name="state" class="form-control" value="" id="state" type="text" placeholder="State">
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i> City : </label>
+
+<input  name="city" class="form-control" value="" id="city" type="text" placeholder="City">
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Latitude : </label>
+
+<input  name="latitude" class="form-control" value="" id="latitude" type="text" placeholder="latitude">
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Longitude : </label>
+    <input  name="longitude" class="form-control" value="" id="longitude" type="text" placeholder="longitude">
+      <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Ip : </label>
+
+    <input  name="ip" class="form-control" value="" id="ip" type="text" placeholder="ip">
+    <script>
+       function location_functn(location) {
+         $.getJSON('https://geolocation-db.com/json/')
+            .done (function(location) {
+
+                $('input:text').val(location.country_name);
+               $('#state').val(location.state);
+               $('#city').val(location.city);
+               $('#latitude').val(location.latitude);
+               $('#longitude').val(location.longitude);
+               $('#ip').val(location.IPv4);
+         });
+       }
+
+    </script>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href='{% static "vendor/bootstrap/css/bootstrap.min.css" %}'>
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href='{% static "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %}'
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href='{% static "css/fontastic.css" %}'>
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href='{% static "https://fonts.googleapis.com/css?family=Poppins:300,400,700" %}'>
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href='{% static "css/style.default.css" id="theme-stylesheet" %}'>
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href='{% static "css/custom.css" %}'>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href='{% static "img/favicon.ico" %}'>
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href='{% static "https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" %}'>
+</head>
+
+<body>
+    <div class="page">
+        <!-- Main Navbar-->
+        <header class="header">
+            <nav class="navbar">
+                <!-- Search Box-->
+                <div class="search-box">
+                    <button class="dismiss"><i class="fa fa-close"></i></button>
+                    <form id="searchForm" action="#" role="search">
+                        <input type="search" placeholder="What are you looking for..." class="form-control">
+                    </form>
+                </div>
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <!-- Navbar Header-->
+                        <div class="navbar-header">
+                            <!-- Navbar Brand --><a href="#" class="navbar-brand d-none d-sm-inline-block">
+                                <div class="brand-text d-none d-lg-inline-block"><span>Edu</span><strong>Boat</strong>
+                                </div>
+                                <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>EB</strong></div>
+                            </a>
+                            <!-- Toggle Button--><a id="toggle-btn" href="#"
+                                class="menu-btn active"><span></span><span></span><span></span></a>
+                        </div>
+                        <!-- Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <!-- Search-->
+                            <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i
+                                        class="fa fa-search"></i></a></li>
+                            <!-- Notifications-->
+                            <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link"><i class="fa fa-bell-o"></i><span
+                                        class="badge bg-red badge-corner">12</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-envelope bg-green"></i>You have 6 new messages
+                                                </div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>10 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                            <strong>view all notifications </strong></a></li>
+                                </ul>
+                            </li>
+                            <!-- Messages                        -->
+                            <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link"><i class="fa fa-envelope-o"></i><span
+                                        class="badge bg-orange badge-corner">10</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Vibhanshu Garg</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                            <strong>Read all messages </strong></a></li>
+                                </ul>
+                            </li>
+                            <!-- Languages dropdown    -->
+                            <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link language dropdown-toggle"><img src=""><span
+                                        class="d-none d-sm-inline-block">English</span></a>
+                                <ul aria-labelledby="languages" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src=""
+                                                class="mr-2">Hindi</a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="" class="mr-2">Other
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <!-- Logout    -->
+                            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link logout"> <span
+                                        class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                <!-- Sidebar Header-->
+                <div class="sidebar-header d-flex align-items-center">
+                    <div class="avatar"><img src="" class="img-fluid rounded-circle"></div>
+                    <div class="title">
+                        <h1 class="h4">Mark Stephen</h1>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+                <!-- Sidebar Navigation Menus-->
+                <span class="heading">Admin Panel</span>
+                <ul class="list-unstyled">
+                    <li><a href="">Dashboard </a></li>
+                    <li><a href="#category" aria-expanded="false" data-toggle="collapse">Categories </a>
+                        <ul id="category" class="collapse list-unstyled ">
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Add new category</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Courses </a></li>
+                    <li class="active"><a href="course-detail-view.html">Courses Details</a></li>
+                    <li><a href="#">Profile View</a></li>
+                    <li><a href="#">Total Users </a></li>
+                    <li><a href="#">Course Inventory</a>
+                    <li><a href="#dropdown-user-account" aria-expanded="false" data-toggle="collapse">User Account Tool
+                        </a>
+                        <ul id="dropdown-user-account" class="collapse list-unstyled ">
+                            <li><a href="#">Student</a></li>
+                            <li><a href="#">Trainer</a></li>
+                            <li><a href="#">Franchise</a></li>
+                            <li><a href="#">Institution</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#dropdown-messaging" aria-expanded="false" data-toggle="collapse">Messaging </a>
+                        <ul id="dropdown-messaging" class="collapse list-unstyled ">
+                            <li><a href="#">Individual Mail</a></li>
+                            <li><a href="#">Bulk Mail</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- <span class="heading">Extras</span>
+          <ul class="list-unstyled">
+            <li> <a href="#">Demo </a></li>
+            </ul> -->
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">Course Detail View</h2>
+                    </div>
+                </header>
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="trainer-name">Trainer Name</label>
+                                        <input type="text" class="form-control" id="trainer-name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="institute-name">Institute Name</label>
+                                        <input type="text" class="form-control" id="institute-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="franchise-name">Franchise Name</label>
+                                        <input type="text" class="form-control" id="franchise-name">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-name">Course Name</label>
+                                        <input type="text" class="form-control" id="course-name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-description">Course Description</label>
+                                        <input type="text" class="form-control" id="course-description">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-category">Course Category</label>
+                                        <input type="text" class="form-control" id="course-category">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-online">Course Online</label>
+                                        <input type="text" class="form-control" id="course-online">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-thumbnail">Course Thumbnail</label>
+                                        <input type="file" class="form-control-file" id="course-thumbnail">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-live">Course Live</label>
+                                        <input type="text" class="form-control" id="course-live">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-offline">Course Offline</label>
+                                        <input type="text" class="form-control" id="course-offline">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-status">Course Status</label>
+                                        <input type="text" class="form-control" id="course-status">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-price">Course Price</label>
+                                        <input type="text" class="form-control" id="course-price">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="promo-code">Promo Code</label>
+                                        <input type="text" class="form-control" id="promo-code">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="discount">Price Discount</label>
+                                        <input type="text" class="form-control" id="discount">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-city">Course City</label>
+                                        <input type="text" class="form-control" id="course-city">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="state">Course State</label>
+                                        <select name="state" id="state" class="form-control">
+                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands
+                                            </option>
+                                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                            <option value="Assam">Assam</option>
+                                            <option value="Bihar">Bihar</option>
+                                            <option value="Chandigarh">Chandigarh</option>
+                                            <option value="Chhattisgarh">Chhattisgarh</option>
+                                            <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                            <option value="Daman and Diu">Daman and Diu</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Lakshadweep">Lakshadweep</option>
+                                            <option value="Puducherry">Puducherry</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Haryana">Haryana</option>
+                                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                            <option value="Jharkhand">Jharkhand</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Kerala">Kerala</option>
+                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                            <option value="Maharashtra">Maharashtra</option>
+                                            <option value="Manipur">Manipur</option>
+                                            <option value="Meghalaya">Meghalaya</option>
+                                            <option value="Mizoram">Mizoram</option>
+                                            <option value="Nagaland">Nagaland</option>
+                                            <option value="Odisha">Odisha</option>
+                                            <option value="Punjab">Punjab</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Sikkim">Sikkim</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Tripura">Tripura</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="Uttarakhand">Uttarakhand</option>
+                                            <option value="West Bengal">West Bengal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="offline-address">Offline Address</label>
+                                        <input type="text" class="form-control" id="offline-address">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="course-belong">Course Belong</label>
+                                        <input type="text" class="form-control" id="course-belong">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label for="intro-video">Intro Video</label>
+                                        <input type="file" class="form-control-file" id="intro-video">
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <!-- Page Footer-->
+                <footer class="main-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>EduBoat &copy; 2020</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript files-->
+    <script src='{% static "vendor/jquery/jquery.min.js" %}'></script>
+    <script src='{% static "vendor/popper.js/umd/popper.min.js" %}'> </script>
+    <script src='{% static "vendor/bootstrap/js/bootstrap.min.js" %}'></script>
+    <script src='{% static "vendor/jquery.cookie/jquery.cookie.js" %}'> </script>
+    <script src='{% static "vendor/chart.js/Chart.min.js" %}'></script>
+    <script src='{% static "vendor/jquery-validation/jquery.validate.min.js" %}'></script>
+    <script src='{% static "js/charts-home.js" %}'></script>
+    <script src='{% static "https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" %}'></script>
+    <!-- Main File-->
+    <script src='{% static "js/front.js" %}'></script>
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="{% static 'css/fontastic.css' %}">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/style.default.css' %}" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Main Navbar-->
+        <header class="header">
+            <nav class="navbar">
+                <!-- Search Box-->
+                <div class="search-box">
+                    <button class="dismiss"><i class="fa fa-close"></i></button>
+                    <form id="searchForm" action="#" role="search">
+                        <input type="search" placeholder="What are you looking for..." class="form-control">
+                    </form>
+                </div>
+                <div class="container-fluid">
+                    <div class="navbar-holder d-flex align-items-center justify-content-between">
+                        <!-- Navbar Header-->
+                        <div class="navbar-header">
+                            <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                                <div class="brand-text d-none d-lg-inline-block"><span>Edu</span><strong>Boat</strong>
+                                </div>
+                                <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>EB</strong></div>
+                            </a>
+                            <!-- Toggle Button--><a id="toggle-btn" href="#"
+                                class="menu-btn active"><span></span><span></span><span></span></a>
+                        </div>
+                        <!-- Navbar Menu -->
+                        <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <!-- Search-->
+                            <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i
+                                        class="fa fa-search"></i></a></li>
+                            <!-- Notifications-->
+                            <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link"><i class="fa fa-bell-o"></i><span
+                                        class="badge bg-red badge-corner">12</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-envelope bg-green"></i>You have 6 new messages
+                                                </div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+                                                <div class="notification-time"><small>4 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                                            <div class="notification">
+                                                <div class="notification-content"><i
+                                                        class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                                                <div class="notification-time"><small>10 minutes ago</small></div>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                            <strong>view all notifications </strong></a></li>
+                                </ul>
+                            </li>
+                            <!-- Messages                        -->
+                            <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link"><i class="fa fa-envelope-o"></i><span
+                                        class="badge bg-orange badge-corner">10</span></a>
+                                <ul aria-labelledby="notifications" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Vibhanshu Garg</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                                            <div class="msg-profile"> <img src="" alt="..."
+                                                    class="img-fluid rounded-circle"></div>
+                                            <div class="msg-body">
+                                                <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+                                            </div>
+                                        </a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center">
+                                            <strong>Read all messages </strong></a></li>
+                                </ul>
+                            </li>
+                            <!-- Languages dropdown    -->
+                            <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    class="nav-link language dropdown-toggle"><img src=""><span
+                                        class="d-none d-sm-inline-block">English</span></a>
+                                <ul aria-labelledby="languages" class="dropdown-menu">
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src=""
+                                                class="mr-2">Hindi</a></li>
+                                    <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="" class="mr-2">Other
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <!-- Logout    -->
+                            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link logout"> <span
+                                        class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                <!-- Sidebar Header-->
+                <div class="sidebar-header d-flex align-items-center">
+                    <div class="avatar"><img src="" class="img-fluid rounded-circle"></div>
+                    <div class="title">
+                        <h1 class="h4">Mark Stephen</h1>
+                        <p>Web Developer</p>
+                    </div>
+                </div>
+                <!-- Sidebar Navigation Menus-->
+                <span class="heading">Admin Panel</span>
+                <ul class="list-unstyled">
+            <li><a href="{% url 'homePage' %}">Home </a></li>
+            <li><a href="{% url 'course' %}">Course </a></li>
+            <li><a href="#"> Total Transactions </a></li>
+            <li><a href="{% url 'user' %}">Total Users</a></li>
+            <li ><a href="#dropdown-customer" aria-expanded="false" data-toggle="collapse">Customer Management</a>
+              <ul id="dropdown-customer" class="collapse list-unstyled ">
+                            <li><a href="{% url 'view_Customer' %}">View User</a></li>
+                            <li><a href="{% url 'add_Customer' %}">Add User</a></li>
+                            <li><a href="{% url 'pending_User' %}">Pending User</a></li>
+                          <!--  <li><a href="#">View Categories</a></li>
+                            <li><a href="#">Add New Category</a></li> -->
+                          </ul></li> 
+            <li class="active"><a href="#dropdown-user-account" aria-expanded="false" data-toggle="collapse">Course Inventory</a>
+              <ul id="dropdown-user-account" class="collapse list-unstyled ">
+                            <li><a href="{% url 'inventory' %}">View Courses</a></li>
+                            <li><a href="{% url 'add_Course' %}">Add New Courses</a></li>
+                            <li><a href="{% url 'show_category' %}">View Categories</a></li>
+                            <li><a href="{% url 'add_category' %}">Add New Category</a></li>
+                          </ul></li>
+            <li><a href="{% url 'bulkemail' %}">Messaging</a></li>
+            <li><a href="#">Tax Tool</a></li>
+            <li><a href="#">API Integration</a></li>
+            <li><a href="#">Account Settings</a></li>
+            <li><a href="#">Certification</a></li>
+            <li><a href="#">SEO/SMO Tool</a></li>
+            <li><a href="#">Dynamic Frontend Website Manager</a></li>
+            <li><a href="#dropdown-user-account" aria-expanded="false" data-toggle="collapse">User Account Tool </a>
+              <ul id="dropdown-user-account" class="collapse list-unstyled ">
+                <li><a href="student-user-account.html">Student</a></li>
+                <li><a href="trainer-user-account.html">Trainer</a></li>
+                <li><a href="franchise-user-account.html">Franchise</a></li>
+                <li><a href="institution-user-account.html">Institution</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Invoices</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Offer & Discount</a></li>
+            <li><a href="#">Membership</a></li>
+            <li><a href="#">Digital Agreement Tool</a></li>
+            <li><a href="{% url 'customer_detail' %}">Customer Support</a></li>
+            
+
+
+            <!-- <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">Example dropdown </a>
+              <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+                <li><a href="#">Page</a></li>
+              </ul>
+            </li> -->
+          </ul>
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">Course Detail View</h2>
+                    </div>
+                </header>
+                <div class="row container table-responsive ml-auto mr-auto ">
+                    <div class="row">
+                        <div class="col-4 m-3 mt-auto mb-auto">
+                            <iframe width="300" height="200" src="https://www.youtube.com/embed/jZU7vEqqPdc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <p></p>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th scope="col"  style="color: rgb(0,0,0);">Course Name</th>
+                                    <td scope="col" style="background-color: #fff;">{{course.courseName}}</td>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Course Category</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.courseCategory}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Price</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.coursePrice}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Discount</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.priceDiscount}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Total Price</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.totalPriceDiscount}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Trainer Name</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.trainer.trainerFullName}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Institute Name</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.intitute.instituteName}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Franchise Name</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.franchise.franchiseName}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Offline State</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.courseState}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Offline City</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.courseCity}}</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="col"  style="color: rgb(0,0,0);">Offline Address</th>
+                                        <td scope="col" style="background-color: #fff;">{{course.offlineAddress}}</td>
+                                      </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+
+
+
+
+
+                <!-- Page Footer-->
+                <footer class="main-footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p>EduBoat &copy; 2020</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/popper.js/umd/popper.min.js' %}"> </script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.cookie/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-validation/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/charts-home.js' %}"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!-- Main File-->
+    <script src="{% static 'js/front.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#profile-table').DataTable();
+        });
+    </script>
+</body>
+
+</html>
